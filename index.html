@@ -4,18 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Registro</title>
+    <title>Registro - [nombre y apellido]</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <script src="js/index.js" defer></script>
 </head>
 <body>
     <!-- Contenedor del Formulario -->
     <div class="container" id="form-container">
         <!-- Ícono principal -->
         <div class="form-icon-container">
-            <i class="fas fa-user-plus"></i>
+            <i class="fas fa-question"></i>
         </div>
         <!-- Título -->
         <h1 class="form-title">Registrarse</h1>
@@ -23,7 +21,7 @@
         <form onsubmit="return false">
             <div class="item-form">
                 <label for="input-name">Nombre y apellido:</label>
-                <input type="text" name="input-name" id="input-name" placeholder="Ingrese su nombre y apellido">
+                <input type="password" name="input-name" id="input-name" placeholder="Ingrese su nombre y apellido">
             </div>
             <div class="item-form">
                 <label for="input-email">Email:</label>
@@ -31,7 +29,7 @@
             </div>
             <div class="item-form">
                 <label for="select-gender">Sexo:</label>
-                <select name="select-gender" id="select-gender" required>
+                <select name="select-gender" id="select-gender" onchange="onChangeSelectGender(this.value)" required>
                     <option value="" disabled selected>Ingrese una opción</option>
                     <option value="female">Mujer</option>
                     <option value="male">Hombre</option>
@@ -40,7 +38,7 @@
                 </select>
             </div>
             <div class="item-form item-form-buttons">
-                <button class="btn-form-registry">Ingresar</button>
+                <!-- Botón de ingreso -->
             </div>
         </form>
         <!-- Mensaje de Error -->
