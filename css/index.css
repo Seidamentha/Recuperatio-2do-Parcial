@@ -79,6 +79,10 @@ body {
     width: 100%;
 }
 
+#form-container .item-form select:invalid {
+    color: gray;
+}
+
 #form-container .item-form input:focus {
     border-color: var(--color-secondary);
     outline: none !important;
